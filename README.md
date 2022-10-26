@@ -21,6 +21,15 @@ download the files and code from the github repo and use the command (npm i) in 
 
 ## Usage
 open the terminal and enter the command (node index.js)
+
+
+
+![example of user input](./images/inputs.JPG)
+
+once all inputs have been put in, the README file will be created
+
+![example of finished README file](./images/finishedexample.JPG)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
@@ -38,6 +47,10 @@ Licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Questions
+If you need futhur assistance please refer to this video: [Google Drive - README Generator](https://drive.google.com/file/d/1jpeHOR8YeXiwp-GIEt0Ejp8FU8H8AaBw/view?usp=drivesdk)
+
+
+
 For any further questions feel free to contact me via:
 - GitHub: [adamlarue19](https://github.com/adamlarue19)
 - Email: [adamlarue1999@icloud.com](mailto:adamlarue1999@icloud.com)
