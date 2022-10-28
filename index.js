@@ -1,71 +1,66 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
-        message: 'What is your PROJECT TITLE?',
+        message: 'What is the title of your project',
         name: 'title',
     },
     {
         type: 'input',
-        message: 'Please DESCRIBE your project.',
+        message: 'Describe your project.',
         name: 'description',
     },
     {
         type: 'input',
-        message: 'What are the INSTALLATION INSTRUCTIONS for your project?',
+        message: 'Instalation instructions for your project.',
         name: 'installation',
     },
     {
         type: 'input',
-        message: 'What are the USAGE INFORMATION for your project?',
+        message: 'What isn the usage info for your project?',
         name: 'usage',
     },
     {
         type: 'list',
         message: 'Which LICENSE would you like?',
-        choices: ["MIT", "Apache", "BSD", "Unlicense"],
+        choices: ["MIT", "Apache", "Unlicense"],
         name: 'license',
     },
     {
         type: 'input',
-        message: 'What are the CONTRIBUTION GUIDELINES for your project?',
+        message: 'What are the contribution guidelines for your project?',
         name: 'contributing',
     },
     {
         type: 'input',
-        message: 'What are the TEST INSTRUCTIONS for your project?',
+        message: 'What are the test instructions for your project?',
         name: 'tests',
     },
     {
         type: 'input',
-        message: 'What is your GITHUB USERNAME?',
+        message: 'What is your github username?',
         name: 'username',
     },
     {
         type: 'input',
-        message: 'What is your EMAIL?',
+        message: 'What is your email?',
         name: 'email',
     },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(data) {
+function writeFile(data) {
     fs.writeFile('USERREADME.md', data, (err) =>
         err ? console.error(err) : console.log('README file saved as USERREADME.md')
     )
 }
-
-// TODO: Create a function to initialize app
-function init() {
+function startApp() {
     inquirer
         .prompt(questions)
-        .then((responses) => writeToFile(generateMarkdown(responses)));
+        .then((responses) => writeFile(generateMarkdown(responses)));
 }
 
-// Function call to initialize app
-init();
+// call the function to start the app
+startApp();
